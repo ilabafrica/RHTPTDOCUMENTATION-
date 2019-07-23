@@ -1,0 +1,18 @@
+site_name: RHTPT DOCUMENTATION
+nav:
+        -  Introduction: index.md 
+        -  Installation: installation.md       
+        -  System Design and Analysis: design.md
+        -  System Design: systemdesign.md
+        -  Code Stracture: stracture.md
+        -  Results Algorithm: results_algorithm.md
+theme:
+        name: material        
+        language: en
+        extra:
+              logo: /docs/images/kenya.png
+        palette:
+                primary: indigo
+                accent: indigo
+        font:
+                text: Roboto 
