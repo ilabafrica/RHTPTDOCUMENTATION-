@@ -1,0 +1,501 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>System Design - RHTPT DOCUMENTATION</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#281-hosting-requirements" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="RHTPT DOCUMENTATION" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              RHTPT DOCUMENTATION
+            </span>
+            <span class="md-header-nav__topic">
+              
+                System Design
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="RHTPT DOCUMENTATION" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    RHTPT DOCUMENTATION
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../design/" title="System Design and Analysis" class="md-nav__link">
+      System Design and Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        System Design
+      </label>
+    
+    <a href="./" title="System Design" class="md-nav__link md-nav__link--active">
+      System Design
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#281-hosting-requirements" title="2.8.1 Hosting Requirements" class="md-nav__link">
+    2.8.1 Hosting Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#282-server-software" title="2.8.2 Server Software" class="md-nav__link">
+    2.8.2 Server Software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-server-hardware" title="2.9 Server Hardware" class="md-nav__link">
+    2.9 Server Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#291-web-server" title="2.9.1 Web Server" class="md-nav__link">
+    2.9.1 Web Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#292-database-server" title="2.9.2 Database Server" class="md-nav__link">
+    2.9.2 Database Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#293-africastalking" title="2.9.3 Africastalking" class="md-nav__link">
+    2.9.3 Africastalking
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../stracture/" title="Code Stracture" class="md-nav__link">
+      Code Stracture
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../results_algorithm/" title="Results Algorithm" class="md-nav__link">
+      Results Algorithm
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#281-hosting-requirements" title="2.8.1 Hosting Requirements" class="md-nav__link">
+    2.8.1 Hosting Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#282-server-software" title="2.8.2 Server Software" class="md-nav__link">
+    2.8.2 Server Software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-server-hardware" title="2.9 Server Hardware" class="md-nav__link">
+    2.9 Server Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#291-web-server" title="2.9.1 Web Server" class="md-nav__link">
+    2.9.1 Web Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#292-database-server" title="2.9.2 Database Server" class="md-nav__link">
+    2.9.2 Database Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#293-africastalking" title="2.9.3 Africastalking" class="md-nav__link">
+    2.9.3 Africastalking
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>System Design</h1>
+                
+                <p>The following diagrams illustrate the overall system design of how the system was build and how different entities work within the system.</p>
+<p><img alt="Use Case" src="../image/usecase.png" /></p>
+<p>The use case diagram shows some of the functions carried out by the different roles within the system. The use case is a general overview of the RHTPT system and the main users who interact with the system. One of the main users is the participants whose some of the functions are shown by the participant use case.</p>
+<p><img alt="Data flow diagram" src="../image/dataflow.png" /></p>
+<p>The data flow diagram shows how different input data generates different out data for different users within the system. Data form the system is not unique to a specific user as it depends on the permission the users have.</p>
+<p><img alt="Context Diagram" src="../image/context.png" /></p>
+<p>The above context diagram show the different entities that interact with the RHTPT system.</p>
+<h3 id="281-hosting-requirements">2.8.1 Hosting Requirements</h3>
+<h3 id="282-server-software">2.8.2 Server Software</h3>
+<p>The CDM is built on Microsoft .NET Framework version 2.0 with a database backend stored in Microsoft SQL Server. </p>
+<pre><code>• Microsoft Windows 2012 or 2014 Server operating system 
+• Microsoft Internet Information Server 5 or Microsoft Internet Information Server 6 Note: these components are included with Microsoft server operating systems but must be installed and configured separately.
+
+• Microsoft SQL Server 2012
+</code></pre>
+<h3 id="29-server-hardware">2.9 Server Hardware</h3>
+<h3 id="291-web-server">2.9.1 Web Server</h3>
+<pre><code>• Intel Pentium 3 or Intel Pentium 4 operating at 2 GHz or better, or AMD Athlon XP or AMD Athlon 64 operating at 1.8 GHz or better 
+• 512 MB RAM or better 
+• Website files are approximately 85 MB. There are items that can make this grow. For example, users are able to upload participant documents to the system. Those files exist on the server with references to them in the database.
+</code></pre>
+<h3 id="292-database-server">2.9.2 Database Server</h3>
+<pre><code>• Intel Pentium 3 or Intel Pentium 4 operating at 2 GHz or better, or AMD Athlon XP or AMD Athlon 64 operating at 1.8 GHz or better 
+• 512 MB RAM or better (1 GB recommended) 
+• 40 GB hard drive – This is a high estimate for space required. Actual space needed depends on number of participants, users, and files uploaded into the documents, forms, and participant files. As a rough estimate, a program of 1,000 participants would result in a database of approximately 200 MB in two years.
+</code></pre>
+<h3 id="293-africastalking">2.9.3 Africastalking</h3>
+<p>This is a web based SMS integration API that helps in the sending of SMS notifications. The API can be used in various platforms such a php. The integration of the API into the system was easy as it only requires one file and the API username and key which can be gotten from the website if Africa’s Talking. The API helped in the development of the SMS module which is responsible for bulk SMS notification to users. For more information on the API click on the following link http://docs.africastalking.com/sms/sending</p>
+<p>The AfricasTalking gateway php file is located    \rhtpt\app\Libraries in the project folders and can be accessed using “use App\Libraries\AfricasTalkingGateway” in the controller.</p>
+<p><img alt="Architecture" src="../image/architecture.png" /></p>
+<p><img alt="" src="../image/architecture2.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../design/" title="System Design and Analysis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                System Design and Analysis
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../stracture/" title="Code Stracture" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Code Stracture
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

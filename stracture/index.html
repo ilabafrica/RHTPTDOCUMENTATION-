@@ -1,0 +1,758 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Code Stracture - RHTPT DOCUMENTATION</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#31-backend-code-design" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="RHTPT DOCUMENTATION" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              RHTPT DOCUMENTATION
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Code Stracture
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="RHTPT DOCUMENTATION" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    RHTPT DOCUMENTATION
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../design/" title="System Design and Analysis" class="md-nav__link">
+      System Design and Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../systemdesign/" title="System Design" class="md-nav__link">
+      System Design
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Code Stracture
+      </label>
+    
+    <a href="./" title="Code Stracture" class="md-nav__link md-nav__link--active">
+      Code Stracture
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-backend-code-design" title="3.1 Backend Code Design" class="md-nav__link">
+    3.1 Backend Code Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-participant-controller" title="3.2 Participant Controller" class="md-nav__link">
+    3.2 Participant Controller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-functions" title="3.3 Functions" class="md-nav__link">
+    3.3 Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#331-public-function-manageparticipant" title="3.3.1 Public function manageParticipant()" class="md-nav__link">
+    3.3.1 Public function manageParticipant()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#332-public-function-index-request-request" title="3.3.2 Public function index (Request $request)" class="md-nav__link">
+    3.3.2 Public function index (Request $request)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#333-filter-based-on-user-roles" title="3.3.3 Filter based on User Roles" class="md-nav__link">
+    3.3.3 Filter based on User Roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#335-filter-users-by-details" title="3.3.5 Filter users by details" class="md-nav__link">
+    3.3.5 Filter users by details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#336-store-function" title="3.3.6 Store Function" class="md-nav__link">
+    3.3.6 Store Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#337-destroy-function" title="3.3.7 Destroy function" class="md-nav__link">
+    3.3.7 Destroy function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#338-restore-function" title="3.3.8 Restore Function" class="md-nav__link">
+    3.3.8 Restore Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#339-transfer-facility-function" title="3.3.9 Transfer facility function" class="md-nav__link">
+    3.3.9 Transfer facility function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3391-enrolled-function" title="3.3.9.1 Enrolled function" class="md-nav__link">
+    3.3.9.1 Enrolled function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-participant-javascript-file" title="3.4 Participant JavaScript file" class="md-nav__link">
+    3.4 Participant JavaScript file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#341-gevueusers-function" title="3.4.1 GeVueUsers function" class="md-nav__link">
+    3.4.1 GeVueUsers function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#342-create-user-function" title="3.4.2 Create User Function" class="md-nav__link">
+    3.4.2 Create User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#343-deletedisable-user-function" title="3.4.3 Delete/disable User Function" class="md-nav__link">
+    3.4.3 Delete/disable User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#344-restore-user-function" title="3.4.4 Restore User Function" class="md-nav__link">
+    3.4.4 Restore User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#345-update-user-function" title="3.4.5 Update User Function" class="md-nav__link">
+    3.4.5 Update User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#346-other-participant-javascript-function" title="3.4.6 Other Participant JavaScript Function" class="md-nav__link">
+    3.4.6 Other Participant JavaScript Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#347-participant-index-file" title="3.4.7 Participant index file" class="md-nav__link">
+    3.4.7 Participant index file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-link-between-controllers-javascript-api-and-index-files" title="3.5 Link between Controllers, JavaScript, API and Index files" class="md-nav__link">
+    3.5 Link between Controllers, JavaScript, API and Index files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../results_algorithm/" title="Results Algorithm" class="md-nav__link">
+      Results Algorithm
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-backend-code-design" title="3.1 Backend Code Design" class="md-nav__link">
+    3.1 Backend Code Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-participant-controller" title="3.2 Participant Controller" class="md-nav__link">
+    3.2 Participant Controller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-functions" title="3.3 Functions" class="md-nav__link">
+    3.3 Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#331-public-function-manageparticipant" title="3.3.1 Public function manageParticipant()" class="md-nav__link">
+    3.3.1 Public function manageParticipant()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#332-public-function-index-request-request" title="3.3.2 Public function index (Request $request)" class="md-nav__link">
+    3.3.2 Public function index (Request $request)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#333-filter-based-on-user-roles" title="3.3.3 Filter based on User Roles" class="md-nav__link">
+    3.3.3 Filter based on User Roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#335-filter-users-by-details" title="3.3.5 Filter users by details" class="md-nav__link">
+    3.3.5 Filter users by details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#336-store-function" title="3.3.6 Store Function" class="md-nav__link">
+    3.3.6 Store Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#337-destroy-function" title="3.3.7 Destroy function" class="md-nav__link">
+    3.3.7 Destroy function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#338-restore-function" title="3.3.8 Restore Function" class="md-nav__link">
+    3.3.8 Restore Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#339-transfer-facility-function" title="3.3.9 Transfer facility function" class="md-nav__link">
+    3.3.9 Transfer facility function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3391-enrolled-function" title="3.3.9.1 Enrolled function" class="md-nav__link">
+    3.3.9.1 Enrolled function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-participant-javascript-file" title="3.4 Participant JavaScript file" class="md-nav__link">
+    3.4 Participant JavaScript file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#341-gevueusers-function" title="3.4.1 GeVueUsers function" class="md-nav__link">
+    3.4.1 GeVueUsers function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#342-create-user-function" title="3.4.2 Create User Function" class="md-nav__link">
+    3.4.2 Create User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#343-deletedisable-user-function" title="3.4.3 Delete/disable User Function" class="md-nav__link">
+    3.4.3 Delete/disable User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#344-restore-user-function" title="3.4.4 Restore User Function" class="md-nav__link">
+    3.4.4 Restore User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#345-update-user-function" title="3.4.5 Update User Function" class="md-nav__link">
+    3.4.5 Update User Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#346-other-participant-javascript-function" title="3.4.6 Other Participant JavaScript Function" class="md-nav__link">
+    3.4.6 Other Participant JavaScript Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#347-participant-index-file" title="3.4.7 Participant index file" class="md-nav__link">
+    3.4.7 Participant index file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-link-between-controllers-javascript-api-and-index-files" title="3.5 Link between Controllers, JavaScript, API and Index files" class="md-nav__link">
+    3.5 Link between Controllers, JavaScript, API and Index files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Code Stracture</h1>
+                
+                <h3 id="31-backend-code-design">3.1 Backend Code Design</h3>
+<p>To explain the system code design will use the participant CRUD together with the search functionality to explain the general PHP, Vuejs and Html design structures.</p>
+<h3 id="32-participant-controller">3.2 Participant Controller</h3>
+<p>The participant controller is located as shown below;</p>
+<p><img alt="Participant Controller" src="../image/participant.png" /></p>
+<p>The controller imports the relevant classes which are required by the available functions within the controller using the use statement. Some of the classes which are used within the controller are shown below;</p>
+<p><img alt="Classes" src="../image/classesp.png" /></p>
+<h3 id="33-functions">3.3 Functions</h3>
+<p>The participant controller has different functions within it the functions are explained below;</p>
+<h3 id="331-public-function-manageparticipant">3.3.1 Public function manageParticipant()</h3>
+<p>This function returns the participant index.blade view file which displays it in the front end.</p>
+<h3 id="332-public-function-index-request-request">3.3.2 Public function index (Request $request)</h3>
+<p>This function is responsible for filtering are fetching data depending also on the different roles from the various tables and pass the data though the participant java script file for them to be displayed in the front end. It uses the request parameter to fetch the necessary data. Some of the methods used in this function is the user statistics which is used to calculate the number of active and inactive participants. The code is shown below.</p>
+<p><img alt="Function Index" src="../image/function_index.png" /></p>
+<p>Firstly the users where the user id (uid) is not null are retrieved and assigned to the variable $user_stats. Then a foreach loop is used to get each individual user using the variable $user_stat. An if statement is then used to if the column deleted_at is equal to null  then the variable  $active_users which was initialized to zero is assigned the sum total of each user where the column deleted_at is equal to null. Otherwise were the column deleted_at is not equal to null the sum of each of those users is assigned to the variable $inactive_users.</p>
+<h3 id="333-filter-based-on-user-roles">3.3.3 Filter based on User Roles</h3>
+<p>The function contains methods that retrieve data depending on the role of the user who has logged into the system. The different roles include county coordinator, sub county coordinator, partner, and facility in charge. The code for this is explained below;</p>
+<p>The diagram below shows the code for two different roles that is the county coordinator and the sub county coordinator. The parameters of the if statement make use of the auth service provided by laravel to differentiate the different users who have logged into the system. The is Auth::user()-&gt;isCountyCoordinator() functions checks if the role of the user is the county coordinator. This function is retrieved the user model. If the role is found to be county coordinator then users and facilities are retrieved based on the county location of that coordinator and assigned to the $users variable by this query statement.</p>
+<p>$users=County::find(Auth::user()-&gt;ru()-&gt;tier)-&gt;users()-&gt;latest()-&gt;withTrashed()-&gt;paginate(100);</p>
+<p><img alt="Filter" src="../image/filter.png" /></p>
+<p>The query uses the County model where the user is filtered then the role of the user is gotten by using role user(ru) then facilities which the user is in charge of is  retrieved  using tier and then finally all users who match that criteria are retrieved with a pagination of 100. This means for each page there will be a hundred results per page. Then the code for calculating statistic is applied.</p>
+<h3 id="335-filter-users-by-details">3.3.5 Filter users by details</h3>
+<p>The users filter also uses the $request parameter to sort participants based on the role of the users. If the role is a county coordinator the results will be filtered based on that criteria otherwise if it’s the administrator role then it will filter based on the different conditions. The code is shown below;</p>
+<p><img alt="User Filter" src="../image/userfilters.png" /></p>
+<p>The code the $request service to get the users details donated by ‘q’ which is retrieved from the web route API  get request shown below.</p>
+<p>Route::get('api/search_participant',['as'=&gt;'participant.search', 'uses'=&gt;'ParticipantController@index']);</p>
+<p>The request is as a result of the call made by the participant javascript file search functions shown below;</p>
+<p><img alt="Participant Search" src="../image/participant_search.png" /></p>
+<p>This code is found in the  public controllers folder participant.js file. The request which is used in the participant controller $request-&gt;get(‘q’)  is found in the functions http get request. Once the controller retrieves the data it is passed to the  JavaScript file using the response function and returned as json data. The javasript search function uses the users array as the variable which stores the response user’s data and then it can be accessed in the front end.</p>
+<h3 id="336-store-function">3.3.6 Store Function</h3>
+<p>This function creates new users and stores them in the database. The code shown below;</p>
+<p><img alt="Store Function" src="../image/store_function.png" />
+The code uses the validate function to verify the required fields. The password is then hashed for security reasons and stored. The role of the user when creating a user is stored in the $role variable then the $tier variable is initialized to null. This will be used to store the facility of the user. The facility id of the user will be then inserted into the user role table.</p>
+<h3 id="337-destroy-function">3.3.7 Destroy function</h3>
+<p>This function disables the use account. Once the button is clicked the user receives a message that their account has been disabled. The code is shown and explained below;</p>
+<p><img alt="Destroy Function" src="../image/destroy_function.png" /></p>
+<p>The message the user will receive is assigned to the $message variable together with their name which is a result of a query where the user is retrieved based on their ‘id’.   The code uses the smshandler to send messages.  The logic is wrapped up in a try_catch method which displays the error massage incase an error is encountered.</p>
+<h3 id="338-restore-function">3.3.8 Restore Function</h3>
+<p>The restore function shown below is designed to restore a disabled user. The function uses the ‘id’  of the user and the restore function to reactive the user. Then the id  of the user is used to find the details of the user where the name of the user is concatenate with the message and assigned to the $message variable. The message is sent to the user using the smshandler  servce with the user’s phone and message variables as the parameters.</p>
+<p><img alt="Restore Function" src="../image/restore_function.png" /></p>
+<h3 id="339-transfer-facility-function">3.3.9 Transfer facility function</h3>
+<p>This function is responsible for transferring participant from one facility to another. The function uses the request service and the $id variable to search for the particular user. The code finds the facility the user is transferring to and the result is assigned to the ‘$fac’ variable. Then $fac variable is assigned to the tier column. The program_id is then assigned to the $prog variable which is then assigned to the program_id column. Finally the content is saved and result returned as a json response. The code is shown below;</p>
+<p><img alt="Facility Function" src="../image/facility_function.png" /></p>
+<h3 id="3391-enrolled-function">3.3.9.1 Enrolled function</h3>
+<p>The enrolled function is used to get enrolled participants.. The code logic is shown and described below;</p>
+<p><img alt="Enrolled Function" src="../image/enroll_function.png" /></p>
+<p>The code starts off with the declaration of the error massage which is assigned to the error variable. The function uses the id parameter to get the identification of each individual participant. The id is used with the round table to get the user id’s of the enrolled participants and convert them to an array using the toArray() function. Then the users details are retrieved and assigned to the variable $usrs.</p>
+<p>The code uses the if statement to check if the $usrs variable has more than zero rows then a foreach loop is applied to get each individual column. A facility query is initiated to get the facility which he is in then the individual object column is assigned to the specific object column of the foreach $enrol variable. The response variable is returned to the JavaScript file as an array of data.</p>
+<h3 id="34-participant-javascript-file">3.4 Participant JavaScript file</h3>
+<p>The Participant JavaScript file starts with including the CSRF token  in the header and then a new Vue instance is created. The name of the initialized Vue object is manage-participant and is maintained in the ‘el’   vue property. The variable which are used within the file are initialized and declared in the ‘data’ Vue property. The Vue ‘computed’  property is responsible maintaining  computational functions while the ‘mounted’ property is for declaring functions which need to be  preloaded. The ‘method’ property is responsible for all functions within the JavaScript file.</p>
+<h3 id="341-gevueusers-function">3.4.1 GeVueUsers function</h3>
+<p>This Vue participant  JavaScript function is responsible for retrieving data via the API using the get request and handles the data from the json response gotten from the controller. The response json object is used to assign the different variables with the required values then an if statement is used as a condition of checking the different roles so as to retrieved the various counties, sub counties and facilities through the API. The code is shown below;</p>
+<p><img alt="Get_Vue_Users" src="../image/get_vue_users.png" /></p>
+<h3 id="342-create-user-function">3.4.2 Create User Function</h3>
+<p>This function registers a new user into the system. The function uses the validate function and the scope parameter to counter check the data entered in the fields. The function uses the post request to post data to the API for storage. The data is sent from the front end through binding of data from the this.newUser object. Then on successful data registration of a user a success massage notification popup with a timeout of 5000. Otherwise if there is an error during this process and error massage within the code will be displayed. The code is shown below;</p>
+<p><img alt="Create Vue User Function" src="../image/create_vue_user.png" /></p>
+<h3 id="343-deletedisable-user-function">3.4.3 Delete/disable User Function</h3>
+<p>This function disables a user by making a call to the controller destroy function via the API.  The function uses the user object parameter to get the specific user id so as to disable that user. Once disabled a success message will popup. The code is shown below;</p>
+<p><img alt="Delete Vue User" src="../image/delete_vue_user.png" /></p>
+<h3 id="344-restore-user-function">3.4.4 Restore User Function</h3>
+<p>This function uses the patch request in the API to restore a disabled user. The function also uses the ‘user’ parameter object to get the users id  and on displays a message on success. The code is shown below;</p>
+<p><img alt="Restore User Function" src="../image/restore_vue_function.png" /></p>
+<h3 id="345-update-user-function">3.4.5 Update User Function</h3>
+<p>This function updates a particular participant’s data using the put API request. The function captures data through binding i.e filluser.first_name is used in the #edit-user modal to get the first name of a user. On save a success message pops up otherwise an error message is shown. The code is shown below;</p>
+<p><img alt="Update user function" src="../image/update_vue_user.png" /></p>
+<h3 id="346-other-participant-javascript-function">3.4.6 Other Participant JavaScript Function</h3>
+<p>The file has a number of function which retrieve data such as the loadfacilities, loadprogram, loadroles.. loadsubcounties, and loadsexes. Other functions include the denyUser function which is used by an authorized user to reject a participant request for registration. The code is shown below;</p>
+<p><img alt="Deny User Function" src="../image/deny_user_vue_function.png" /></p>
+<h3 id="347-participant-index-file">3.4.7 Participant index file</h3>
+<p>The participant file is responsible for data capture and manipulation. The data is presented to the index  file by the JavaScript file  enclosed in the ‘el:manage-participant’ property all data must be wrapped in a div  as shown;</p>
+<p><img alt="Participant Index file" src="../image/participant_index.png" /></p>
+<h3 id="35-link-between-controllers-javascript-api-and-index-files">3.5 Link between Controllers, JavaScript, API and Index files</h3>
+<p>When creating a new CRUD instance one will need a controller, js and index file. The controllers will be made using the php artisan make caravel make command. The javascript file will be in the appropriate folder as discussed above while the index file will be made in the resources folder.  To link the three files to ensure that the functions are working correctly. Create a route in the API web route file as the one shown below;</p>
+<p><img alt="Route Resources" src="../image/route_resources.png" /></p>
+<p>The javascript file in this case the participant javascript file API CRUD request will use the controllers CRUD as a resource. Then the javascript file if called in the browser during loading so as to carry out the various functionalities. To do this the below line is added at the bottom of the app.blade file.</p>
+<p><script src="{{ asset('controllers/participant.js') }}"></script></p>
+<p>The below image shows the code in the context explained above together with other JavaScript files.</p>
+<p><img alt="Participant reference file" src="../image/participant_reference.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../systemdesign/" title="System Design" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                System Design
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../results_algorithm/" title="Results Algorithm" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Results Algorithm
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
